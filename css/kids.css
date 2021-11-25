@@ -10,9 +10,6 @@
     font-family: 'Cairo', sans-serif;
     color: white;
 }
-i {
-    cursor: pointer;
-}
 :root {
     --eating: #edbf47;
     --fun: #6fc191;
@@ -31,35 +28,6 @@ i {
     justify-content: center;
     align-items: center;
 }
-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 4px 4px 0 0;
-}
-button {
-    cursor: pointer;
-}
-.pic-cont {
-    height: 250px;
-}
-.pic-cont.differ {
-    height: 400px;
-}
-.news {
-    background-color: #495052;
-    position: absolute;
-    padding: 2px 15px;
-    top: 15px;
-    right: 15px;
-    border-radius: var(--radius);
-}
-.read-more {
-    border-radius: var(--radius);
-    padding: 5px 20px;
-    margin: 10px 0;
-    background-color: rgba(60, 60, 60, .2);
-    width: max-content;
-}
 .parent {
     padding: 10px;
 }
@@ -75,14 +43,40 @@ button {
     row-gap: 15px;
     margin-bottom: 20px;
     grid-template-rows: repeat(2,auto);
+}
+.col > div {
     border-radius: var(--radius);
+}
+.col .pic-cont {
+    height: 250px;
+}
+.col .pic-cont.differ {
+    height: 400px;
+}
+.col img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px 4px 0 0;
 }
 .col  h2 {
     text-transform: uppercase;
     font-weight: 400;
 }
-.col > div {
+.col .news {
+    background-color: #495052;
+    position: absolute;
+    padding: 2px 15px;
+    top: 15px;
+    right: 15px;
     border-radius: var(--radius);
+}
+.col .read-more {
+    border-radius: var(--radius);
+    padding: 5px 20px;
+    margin: 10px 0;
+    background-color: rgba(60, 60, 60, .2);
+    width: max-content;
+    cursor: pointer;
 }
 .col .details {
     padding: 10px 20px 0 15px;
@@ -107,6 +101,12 @@ button {
 .col-1 > .driving {
     background-color: var(--fun);
 }
+.col-2 > .reading {
+    background-color: var(--reading);
+}
+.col-3 > .drawing {
+    background-color: var(--drawing);
+}
 .col-2 .quotation {
     background-color: var(--quotation);
     padding: 30px;
@@ -114,7 +114,6 @@ button {
     flex-direction: column;
 }
 .quotation > .quote-mark {
-    width: max-content;
     margin: 10px auto;
 }
 .quotation > .quote-mark::after {
@@ -124,14 +123,9 @@ button {
     font-weight: bold;
     font-family: auto;
     position: absolute;
-    top: -5px;
+    top: -18px;
     left: -35px;
-}
-.col-2 > .reading {
-    background-color: var(--reading);
-}
-.col-3 > .drawing {
-    background-color: var(--drawing);
+    transform: rotate(180deg) scaleX(1.5);
 }
 .col-3 > .checking {
     background-color: var(--checking);
